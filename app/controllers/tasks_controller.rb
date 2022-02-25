@@ -24,7 +24,7 @@ class TasksController < ApplicationController
 
   # POST /tasks or /tasks.json
   def create
-    @tasks = current_user.tasks.build(tasks_params)
+    @tasks = current_user.tasks.build
 
     respond_to do |format|
       if @task.save

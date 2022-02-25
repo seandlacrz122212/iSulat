@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   resources :tasks
   
-  # get 'home/about'
-  # root 'home#index'
-  
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
   get 'home/about'
-  root 'home#index' 
+  root 'tasks#index' 
 end
