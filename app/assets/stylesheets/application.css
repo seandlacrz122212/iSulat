@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=Shizuru&display=swap');
+
+/* ---- home#index ---- */
+.home-index {
+    width:100%;
+    height: auto;
+    border: 5px black;
+    padding: 15px 30px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+#home-h1 {
+    font-weight: 1000px;
+    font-size: 250px;
+    font-family: 'Shizuru', cursive;
+    text-align: center;
+}
+
+#home-h2 {
+    font-size: 35px;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+.home-btn {
+    border:.2rem solid rgb(65, 62, 62);
+    background-color: rgb(65, 62, 62);
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1.7rem;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 20px;
+    top:19px;
+    margin: 10px;
+    padding: 10px 25px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.home-btn::before{
+    content: '';
+    position: absolute;
+    top:0; right: 0;
+    width:0%;
+    height:100%;
+    background: rgb(121, 117, 117);
+    transition: .3s linear;
+    z-index: -1;
+  }
+  
+.home-btn:hover::before{
+    width:100%;
+    left: 0;
+}
+  
+.home-btn:hover{
+    color:whitesmoke;
+}
+
+ /*---- session#signin---- */
+
+.session-logo {
+    width:100%;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+#session-h1 {
+    font-weight: 1000px;
+    font-size: 80px;
+    font-family: 'Shizuru', cursive;
+    text-align: center;
+}
+
+#session-h2 {
+    font-size: 11px;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+.session-new {
+    width: 100%;
+    height: auto;
+    border: 5px;
+    margin-top: 30px;
+    padding: 30px;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.session-field {
+    width:400px;
+    height: 50px;
+    font-size: 20px;
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 3px solid rgb(170, 167, 167);
+    border-radius: 15px;
+}
+
+.session-link {
+    font-size: small;
+    text-decoration: none;
+}
+
+.signin-btn {
+    border:.2rem solid rgb(65, 62, 62);
+    background-color: rgb(65, 62, 62);
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1.7rem;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 20px;
+    top:19px;
+    margin: 10px;
+    padding: 5px 18px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.signin-btn::before{
+    content: '';
+    position: absolute;
+    top:0; right: 0;
+    width:0%;
+    height:100%;
+    background: rgb(121, 117, 117);
+    transition: .3s linear;
+    z-index: -1;
+  }
+  
+  .signin-btn:hover::before{
+    width:100%;
+    left: 0;
+  }
+  
+  .signin-btn:hover{
+    color:whitesmoke;
+  }
+
+
+   /*---- session#signup---- */

@@ -1,0 +1,6 @@
+<h1>Edit Task</h1><br>
+
+<%= render "form", task: @task %>
+<td><%= link_to "Delete", @task, method: :delete,
+      data: { confirm: 'Are you sure?'}, class:"btn btn-outline-danger" %></td>
+
