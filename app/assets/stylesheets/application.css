@@ -137,14 +137,37 @@
     z-index: -1;
   }
   
-  .signin-btn:hover::before{
+.signin-btn:hover::before{
     width:100%;
     left: 0;
   }
   
-  .signin-btn:hover{
+.signin-btn:hover{
     color:whitesmoke;
   }
 
 
-   /*---- session#signup---- */
+   /*---- Category---- */
+   
+
+h1 {
+    font-size: 50px;
+    font-family: 'Nunito', sans-serif;
+}
+
+#categories {
+    width: 200px;
+    height: 250px;
+    border: 1px solid rgb(161, 161, 161);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  
+#categories:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+.container {
+    padding: 2px 16px;
+  }

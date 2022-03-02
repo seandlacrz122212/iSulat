@@ -10,6 +10,9 @@ class TasksController < ApplicationController
 
   # GET /tasks/1 or /tasks/1.json
   def show
+    @task= Task.find(params[:id])
+
+    @relative_tasks = task.where(category_id: @task.category_i)
   end
 
   # GET /tasks/new
@@ -24,7 +27,7 @@ class TasksController < ApplicationController
 
   # POST /tasks or /tasks.json
   def create
-    @tasks = current_user.tasks.build
+    @task = Task.new(task_params)
 
     respond_to do |format|
       if @task.save
@@ -73,6 +76,6 @@ class TasksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def task_params
-      params.require(:task).permit(:task_title, :date, :notes)
+      params.require(:task).permit(:task_title, :date, :notes, :category_id)
     end
 end
