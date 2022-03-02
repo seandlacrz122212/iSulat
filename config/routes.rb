@@ -3,9 +3,12 @@ Rails.application.routes.draw do
   devise_for :users
   resources :tasks
   
+  get "edit/category/:id/" => "categories#edit"
+
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
+  
   get 'home/about'
   root 'categories#index' 
 end

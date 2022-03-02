@@ -142,7 +142,7 @@
     left: 0;
   }
   
-.signin-btn:hover{
+  .signin-btn:hover{
     color:whitesmoke;
   }
 
@@ -162,6 +162,7 @@ h1 {
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
+    text-align: center;
   }
   
 #categories:hover {
@@ -169,5 +170,56 @@ h1 {
   }
 
 .container {
-    padding: 2px 16px;
+    padding: 16px 16px;
+    justify-content: center;
+   text-align: center;
   }
+
+#category-title {
+    text-align: center;
+    font-weight: 60px;
+    font-size: 30px;
+    font-family: 'Shizuru', cursive;
+    text-align: center;
+    width: auto;
+    margin-top: 80px;
+}
+
+
+.view-btn {
+    border:.2rem solid rgb(65, 62, 62);
+    background-color: rgb(65, 62, 62);
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20px;
+    top:25px;
+    padding: 5px 18px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.view-btn::before{
+    content: '';
+    position: absolute;
+    top:0; right: 0;
+    width:0%;
+    height:100%;
+    background: rgb(121, 117, 117);
+    transition: .3s linear;
+    z-index: -1;
+  }
+  
+.view-btn:hover::before{
+    width:100%;
+    left: 0;
+  }
+  
+  .view-btn:hover{
+    color:whitesmoke;
+  }
+

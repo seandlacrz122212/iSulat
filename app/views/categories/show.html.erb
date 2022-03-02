@@ -1,5 +1,15 @@
 <p style="color: green"><%= notice %></p><br>
+<div>
 
 <%= render @category %>
+
+<%= link_to "Edit", edit_category_path(@category), class:"btn btn-outline-dark" %> 
+<%= link_to "Back", categories_path, class:"btn btn-outline-dark" %><br><br>
+<%= button_to "🗑️", @category, method: :delete, class:"btn btn-outline-danger" %>
+</div> <hr>
+<br><br><br>
+
+<%= link_to "+", new_task_path, class:"btn btn-secondary" %>
+
 
 
