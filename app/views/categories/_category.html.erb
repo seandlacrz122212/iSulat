@@ -1,8 +1,10 @@
 <div id="<%= dom_id category %>">
   
-  <h1>
-    <%= category.category %>
-  </h1>
+  <h1><%= category.category %></h1>
+  
+    <%= link_to "Edit", edit_category_path(@category), class:"btn btn-outline-dark" %> 
+    <%= link_to "Back", categories_path, class:"btn btn-outline-dark" %><br><br>
+    <%= button_to "🗑️", @category, method: :delete, class:"btn btn-outline-danger" %><hr>
 
   <%= link_to "+", new_task_path, class:"btn btn-secondary" %>
 
