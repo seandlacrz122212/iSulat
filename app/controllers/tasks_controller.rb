@@ -5,7 +5,11 @@ class TasksController < ApplicationController
   
   # GET /tasks or /tasks.json
   def index
-    @tasks = Task.all
+    if params.has_key?(:category)
+      @category = Category.find_by_name(params[:category])
+      @tasks = Task.where(category: @category)
+    else
+      @tasks = Task.all
   end
 
   # GET /tasks/1 or /tasks/1.json
@@ -27,7 +31,7 @@ class TasksController < ApplicationController
 
   # POST /tasks or /tasks.json
   def create
-    @task = Task.new(task_params)
+    @task = current_user.tasks.build(task_params)
 
     respond_to do |format|
       if @task.save
@@ -76,6 +80,6 @@ class TasksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def task_params
-      params.require(:task).permit(:task_title, :date, :notes, :category_id)
+      params.require(:task).permit(:task_title, :date, :notes, :user_id, :category_id) 
     end
 end

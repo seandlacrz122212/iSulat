@@ -172,8 +172,11 @@ h1 {
 .container {
     padding: 16px 16px;
     justify-content: center;
-   text-align: center;
-  }
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 1300px;
+}
+
 
 #category-title {
     text-align: center;
@@ -223,3 +226,40 @@ h1 {
     color:whitesmoke;
   }
 
+  .newcat-btn {
+    border:.2rem solid rgb(65, 62, 62);
+    background-color: rgb(65, 62, 62);
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 300px;
+    font-size: 2rem;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20px;
+    top: 90px;
+    padding: 13px 15px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.newcat-btn-btn::before{
+    content: '';
+    position: absolute;
+    top:0; right: 0;
+    width:0%;
+    height:100%;
+    background: rgb(121, 117, 117);
+    transition: .3s linear;
+    z-index: -1;
+  }
+  
+.newcat-btn:hover::before{
+    width:100%;
+    left: 0;
+  }
+  
+  .newcat-btn:hover{
+    color:whitesmoke;
+  }

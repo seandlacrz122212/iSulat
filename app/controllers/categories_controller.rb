@@ -12,7 +12,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories/new
   def new
-    @category = Category.new(:category_id)
+    @category =  Category.new
   end
 
   # GET /categories/1/edit
@@ -21,7 +21,7 @@ class CategoriesController < ApplicationController
 
   # POST /categories or /categories.json
   def create
-    @category = Category.new(category_params)
+    @category = Category.new
 
     respond_to do |format|
       if @category.save
@@ -65,6 +65,6 @@ class CategoriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def category_params
-      params.require(:category).permit(:category)
+      params.require(:category).permit(:category, :user_id) 
     end
 end

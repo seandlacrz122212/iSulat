@@ -1,14 +1,19 @@
 <% if user_signed_in? %>
 
-<h1>Tasks</h1>
+<h1>Tasks | <% link_to "New Category", new_category_path %></h1>
 
 <br> 
+
+
+<% Category.all.each.do |cat| %>
+<%= link_to cat.name, tasks_path(category: cat.name)%>
 
 <table class="table">
   <thead class="thead-dark">
     <tr>
       <th scope="col">Title</th>
       <th scope="col">User Id</th>
+      <th scope="col">Category</th>
       <th colspam="1"></th>
     </tr>
   </thead>
@@ -20,6 +25,7 @@
     
     <tr>
       <td><%= link_to task.task_title, task %></td>
+      <td><%= task.category %></td>
       <td><%= task.user_id %></td>
     </tr>
     <% end %>
